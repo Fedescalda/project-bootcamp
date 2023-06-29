@@ -16,12 +16,12 @@ window.addEventListener('DOMContentLoaded', function () {
         const inputValues = [userName.value, passWord.value]
         inputValues.forEach(function (emptyInputs, index) {
             if (emptyInputs == '') {
-                if (index == 0) {
-                    warningUsername.innerText = 'El nombre de usuario esta vacio'
-                    isValid = false
-                    return
-                } else if (index == 1) {
-                    warningPassword.innerText = 'La contraseña de usuario esta vacio'
+                if (index == 0 || index == 1) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Por favor, completa todos los campos.',
+                        })
                     isValid = false
                     return
                 }
@@ -45,3 +45,4 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 })
+
