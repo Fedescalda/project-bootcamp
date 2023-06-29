@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
         inputs.forEach(function(emptyInputs) {
             if (emptyInputs == '') {
-                displayWarning.innerHTML = 'El nombre de usuario esta vacio'
+                userName.value = 'El nombre de usuario esta vacio'
                 isValid = false
                 return
             }
