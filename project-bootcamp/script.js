@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
     
-    document.getElementById('')
+    const userName = document.getElementById('usename')
+    const passWord = document.getElementById('passwords')
 
 })
