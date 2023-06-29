@@ -1,8 +1,9 @@
 window.addEventListener('DOMContentLoaded', function () {
-    const userName = document.getElementById('username');
-    const passWord = document.getElementById('password');
-    const logInButton = document.getElementById('logInButton');
-  
+
+    const userName = document.getElementById('username')
+    const passWord = document.getElementById('password')
+    const logInButton = document.getElementById('logInButton')
+    
     logInButton.addEventListener('click', function(event) {
       event.preventDefault();
   
@@ -25,8 +26,16 @@ window.addEventListener('DOMContentLoaded', function () {
           text: 'Por favor, ingresa la contraseña.',
         });
       } else {
-        console.log('Inicio de sesión exitoso');
+        console.log('Inicio de sesión exitoso')
       }
-    });
-  });
+    })
+
+    userName.addEventListener('click', function() {
+        userName.value = ''
+    })
+    passWord.addEventListener('click', function() {
+        passWord.value = ''
+    })
+
+  })
   
