@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', function () {
             isValid = false
             return
         }
-        if (!/^(?=.[A-Z])(?=.\d)(?=.*[^a-zA-Z0-9]).{6,12}$/.test(passWord.value)) {
+        if (/^(?=.[A-Z])(?=.\d)(?=.*[^a-zA-Z0-9]).{6,12}$/.test(passWord.value)) {
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
