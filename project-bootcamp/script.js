@@ -26,9 +26,7 @@ window.addEventListener('DOMContentLoaded', function () {
                     return
                 }
             }
-            
         })
-
 
     })
 
@@ -40,9 +38,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 warningPassword.innerHTML = ''
             }
         })
-
     })
-
 
 })
 
