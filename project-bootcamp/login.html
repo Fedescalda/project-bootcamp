@@ -9,25 +9,43 @@
 <h2>Ingrese su datos de estudiante</h2>
 
 <form>
-  </div>
-
   <div class="container">
-    <label for="user_name"><b>Usuario</b></label>
-    <input type="text" placeholder="Ingrese su usuario" name="user_name" required>
-
-    <label for="pass"><b>Contraseña</b></label>
-    <input type="password" placeholder="Ingrese su Contraseña" name="pass" required>
-        
-    <button type="submit">Ingresar</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Recordar mi datos
-    </label>
+    <table>
+      <tr>
+        <td>
+          <label for="user_name"><b>Usuario</b></label>
+          <input type="text" placeholder="Ingrese su usuario" name="user_name" id="userName" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="pass"><b>Contraseña</b></label>
+          <input type="password" placeholder="Ingrese su Contraseña" name="pass" id="passWord" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="cancelbtn">Cancelar</button>
+        </td>
+        <td>
+          <button class="signupbtn">Ingresar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Recordar mi datos</label>
+          <input type="checkbox" name="remember" id="rememberLogIn">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="pass">Olvidaste tu <a href="#">contraseña?</a></span>
+        </td>
+      </tr>
+    </table>
   </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancelar</button>
-    <span class="pass">Olvidaste tu <a href="#">contraseña?</a></span>
-  </div>
+    
+    
 </form>
 
 </body>
