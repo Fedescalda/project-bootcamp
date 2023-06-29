@@ -1,34 +1,47 @@
 window.addEventListener('DOMContentLoaded', function () {
-    
+
     const userName = document.getElementById('username')
     const passWord = document.getElementById('password')
-    const inputs = [userName.value, passWord.value]
+    const inputs = [userName, passWord]
     const logInButton = document.getElementById('logInButton')
 
-    const displayWarning = document.getElementById('displayWarning')
+    const warningUsername = document.getElementById('warningUsername')
+    const warningPassword = document.getElementById('warningPassword')
 
-    logInButton.addEventListener('click', function(event) {
+    logInButton.addEventListener('click', function (event) {
         event.preventDefault()
 
         let isValid = true
 
-        inputs.forEach(function(emptyInputs, index) {
-            if(emptyInputs == '') {
+        const inputValues = [userName.value, passWord.value]
+        inputValues.forEach(function (emptyInputs, index) {
+            if (emptyInputs == '') {
                 if (index == 0) {
-                    userName.value = 'El nombre de usuario esta vacio'
+                    warningUsername.innerText = 'El nombre de usuario esta vacio'
                     isValid = false
                     return
                 } else if (index == 1) {
-                    passWord.value = 'La contraseña de usuario esta vacio'
+                    warningPassword.innerText = 'La contraseña de usuario esta vacio'
                     isValid = false
                     return
                 }
             }
-
-
+            
         })
 
 
     })
+
+    inputs.forEach(function(blankInputs, index) {
+        blankInputs.addEventListener('click', function() {
+            if (index == 0) {
+                warningUsername.innerHTML = ''
+            } else if (index == 1) {
+                warningPassword.innerHTML = ''
+            }
+        })
+
+    })
+
 
 })
