@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', function () {
     const userName = document.getElementById('username')
     const passWord = document.getElementById('password')
     const logInButton = document.getElementById('logInButton')
+    const signUpButton = document.getElementById('signUpButton')
     const dataForm = document.getElementById('dataForm')
 
 
@@ -60,6 +61,10 @@ window.addEventListener('DOMContentLoaded', function () {
         if (isValid) {
             dataForm.submit()
         }
+    })
+
+    signUpButton.addEventListener('click', function () {
+        window.location.href = 'register.html'
     })
 
     userName.addEventListener('click', function () {
